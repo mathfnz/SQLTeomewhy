@@ -1,5 +1,6 @@
 SELECT
    IdCliente,
-   qtdePontos
+   qtdePontos,
+   DtCriacao
 FROM
    clientes

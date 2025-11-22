@@ -1,2 +1,1 @@
-# SQLTeomewhy
-# SQLTeomewhy
+# SQL Studies
