@@ -8,13 +8,17 @@
 
 SELECT
     IdCliente,
-    sum(QtdePontos) AS SOMA,
-    DATETIME(DtCriacao) as DataFormatada
+    SUM(QtdePontos) AS somaPontos,
+    COUNT(IdTransacao) AS qtdTransacoes
 FROM
     transacoes
 WHERE
-    DataFormatada >= '2025-07-01'
+    DtCriacao >= '2025-07-01'
     AND
-    DataFormatada <= '2025-08-01'
+    DtCriacao <= '2025-08-01'
 GROUP BY
     IdCliente
+HAVING
+    SUM(somaPontos) >= 4000
+ORDER BY
+    somaPontos DESC
