@@ -19,6 +19,6 @@ WHERE
 GROUP BY
     IdCliente
 HAVING
-    SUM(somaPontos) >= 4000
+    SUM(QtdePontos) >= 4000
 ORDER BY
     somaPontos DESC
